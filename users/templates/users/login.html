@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h3>Login</h3>
+<form action="{% url 'login' %}" , method="POST">
+    {% csrf_token %}
+    <div class="form-group ">
+        <label class="col-sm-2 col-form-label">Username</label>
+        <input type="text" , name="username" , placeholder="Username" />
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 col-form-label">Password</label>
+        <input type="password" , name="password" , placeholder="Enter password" />
+    </div>
+    <input type="submit" , value="login" />
+    <span><a href="{% url 'register_user' %}">Register</a></span>
+    <span><a href="{% url 'reset_password' %}">Forget Password</a></span>
+</form>
+{% endblock content %}

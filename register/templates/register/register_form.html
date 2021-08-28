@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% if update %}
+<h2>Account</h2>
+{% else %}
+<h2>User Registration</h2>
+{% endif %}
+
+{% load crispy_forms_tags %}
+<form action="" , method="POST">
+    {% csrf_token %}
+
+    {{ form|crispy }}
+
+    <div class="form-group">
+        <input class="btn btn-success" type="submit" value="Submit">
+    </div>
+</form>
+
+{% endblock content %}
