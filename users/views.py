@@ -92,7 +92,8 @@ def download(request):
 	font_style.font.bold = True
 
 	#column header names, you can use your own headers here
-	columns = ['Column 1', 'Column 2', 'Column 3', 'Column 4', ]
+	columns = ['name', 'whatsapp_number', 'phone_number', 'profession', 'its_id', 'qualification', 'email',
+                'blood_group', 'maritial_status', 'child_in_msb', 'year_of_passing']
 
 	#write column headers in sheet
 	for col_num in range(len(columns)):
@@ -106,9 +107,16 @@ def download(request):
 	for my_row in data:
 		row_num = row_num + 1
 		ws.write(row_num, 0, my_row.name, font_style)
-		ws.write(row_num, 1, my_row.father_name, font_style)
+		ws.write(row_num, 1, my_row.whatsapp_number, font_style)
 		ws.write(row_num, 2, my_row.phone_number, font_style)
 		ws.write(row_num, 3, my_row.profession, font_style)
+		ws.write(row_num, 4, my_row.its_id, font_style)
+		ws.write(row_num, 5, my_row.qualification, font_style)
+		ws.write(row_num, 6, my_row.email, font_style)
+		ws.write(row_num, 7, my_row.blood_group, font_style)
+		ws.write(row_num, 8, my_row.maritial_status, font_style)
+		ws.write(row_num, 9, my_row.child_in_msb, font_style)
+		ws.write(row_num, 10, my_row.year_of_passing, font_style)
 
 	wb.save(response)
 	return response
