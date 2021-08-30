@@ -82,6 +82,7 @@ WSGI_APPLICATION = 'hsb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# local database  
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -93,12 +94,24 @@ WSGI_APPLICATION = 'hsb.wsgi.application'
 #     }
 # }
 
+# heroku database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dcd9opfddqdm1j',
+        'USER': 'giflxdobvxqvcv',
+        'PASSWORD': 'd9ad1934a79605293d6145470498cbddfe3d84944c40155ce85d6c2553f4f956',
+        'HOST': 'ec2-44-197-40-76.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 # Password validation
