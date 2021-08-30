@@ -1,1 +1,1 @@
-web: gunicorn hsb.wsgi
+web: gunicorn hsb.wsgi --log-file -
