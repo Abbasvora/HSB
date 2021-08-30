@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'register.apps.RegisterConfig',
-    'crispy_forms',
+    "crispy_forms",
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'hsb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DEMO',
+        'USER': 'postgres',
+        'PASSWORD': 'akl345*gvr&hb@',
+        'HOST': 'localhost',
+        'PORT':'5432',
     }
 }
 
