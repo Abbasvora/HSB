@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-bry3nkm)+%y($_#hvv^@g29a!!rjv8fg%-!%=m0h(=7y23xh!w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['test-hsb.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -81,14 +81,21 @@ WSGI_APPLICATION = 'hsb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'DEMO',
+#         'USER': 'postgres',
+#         'PASSWORD': 'akl345*gvr&hb@',
+#         'HOST': 'localhost',
+#         'PORT':'5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'DEMO',
-        'USER': 'postgres',
-        'PASSWORD': 'akl345*gvr&hb@',
-        'HOST': 'localhost',
-        'PORT':'5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
