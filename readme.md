@@ -1,9 +1,5 @@
-#
+# Django Based Back End
 
-Install requirements using `requirements.txt`
+User can register but admin of site will have authority to accept or decline registration.
 
-to run project use following command
-
-```python
-python manage.py runserver
-```
+Once registered user will recieve email containing login credentials.
